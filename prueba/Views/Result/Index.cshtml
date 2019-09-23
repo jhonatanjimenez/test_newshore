@@ -1,0 +1,25 @@
+﻿
+@{
+    ViewBag.Title = "Resultados";
+}
+
+<div class="jumbotron">
+    <h1>
+        Resultados
+    </h1>
+
+</div>
+
+
+<div class="row">
+    <div class="col-md-6 col-md-offset-3">
+
+
+        @Html.ActionLink("Descargar Resultados", "Download", "Result", null, new { target="_back", @class = "btn btn-primary btn-block", role = "button" })
+        <br><br>
+        @ViewBag.Message
+
+
+    </div>
+
+</div>

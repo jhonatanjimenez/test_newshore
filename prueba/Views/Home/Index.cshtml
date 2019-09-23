@@ -1,0 +1,43 @@
+﻿
+@{
+    ViewBag.Title = "Ficheros";
+}
+
+
+<div class="jumbotron">
+    <h1>
+        Prueba acceso .Net
+    </h1>
+
+</div>
+
+<div class="row">
+    <div class="col-md-6 col-md-offset-3">
+        <h2>Cargar Archivos</h2>
+
+        @using (Html.BeginForm("UploadFile",
+        "Home",
+        FormMethod.Post,
+        new { enctype = "multipart/form-data" }))
+    {
+        <div class="form-group col-md-12">
+            <label for="fileCustomers" class="col-md-2">Clientes</label>
+            <input type="file" id="fileCustomers" name="fileCustomers" class="col-md-10">
+            <div class="clearfix"></div>
+            <p class="help-block col-md-12">Clientes de NEWSHORE</p>
+        </div>
+        <div class="clearfix"></div>
+        <div class="form-group col-md-12">
+            <label for="fileContent" class="col-md-2">Contenido</label>
+            <input type="file" id="fileContent" name="fileContent" class="col-md-10">
+            <div class="clearfix"></div>
+            <p class="help-block col-md-12">Contenido</p>
+        </div>
+        <div class="clearfix"></div>
+        <input type="submit" class="btn btn-primary btn-block" value="Guardar">
+        <br><br>
+        @ViewBag.Message
+}
+    </div>
+
+</div>
